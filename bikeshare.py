@@ -1,10 +1,18 @@
-# 6 February 2022
+# bikeshare.py
+# Initial version for submission: 6 February 2022
+# Editing and posting to GitHub 4 March 2022
 
 import time
 import pandas as pd
 import numpy as np
 import calendar
 
+# Data files required in comma separated value (csv) format
+# First line needs to contain the column name
+# The following columns are required:
+#    Start Time,End Time,Trip Duration,Start Station,End Station,User Type
+# The following columns are optional:
+#    Gender,Birth Year
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -20,7 +28,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
 
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington). 
     city = ""
     while city not in ['chicago','washington','new york']:
         city = input("Would you like to see data for Chicago, New York, or Washington? ").lower()
@@ -226,16 +234,19 @@ def display_raw_data(df):
 def main():
     print(pd.__version__)
     while True:
+        # get data filter selection and load data into data frame
         city, month, day = get_filters()
         df = load_data(city, month, day)
         print("Displaying Data for: {}, Month: {}, Day: {}".format(city.title(),month.title(),day.title()))
 
+        # run individual functions to get statistics
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
         display_raw_data(df)
 
+        # check to see if user wants to run program again
         restart = ""
         while restart not in ['yes','no']:
             restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
