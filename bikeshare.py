@@ -1,4 +1,6 @@
-# 6 February 2022
+# bikeshare.py
+# Initial version for submission: 6 February 2022
+# Editing and posting to GitHub 4 March 2022
 
 import time
 import pandas as pd
