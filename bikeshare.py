@@ -7,6 +7,12 @@ import pandas as pd
 import numpy as np
 import calendar
 
+# Data files required in comma separated value (csv) format
+# First line needs to contain the column name
+# The following columns are required:
+#    Start Time,End Time,Trip Duration,Start Station,End Station,User Type
+# The following columns are optional:
+#    Gender,Birth Year
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -22,7 +28,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
 
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington). 
     city = ""
     while city not in ['chicago','washington','new york']:
         city = input("Would you like to see data for Chicago, New York, or Washington? ").lower()
