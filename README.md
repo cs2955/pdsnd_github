@@ -1,17 +1,21 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 ### Date created
-Include the date you created this project and README file.
+* Initial program 6 February 2022
+* Uploaded to GitHub 4 March 2022
 
-### Project Title
-Replace the Project Title
+### Programming for Data Science with Python Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+The program analyzes bikeshare data and reports statistics for a given city by date.
+Users can choose one of three cities -- Chicago, Washington, or New York -- and calculate statistics by month, day, or for the entire data set.
 
 ### Files used
-Include the files used
+* bikeshare.py
+* chicago.csv
+* new_york_city.csv
+* washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+* Udacity, Programming for Data Science with Python, Course Notes.
+* [Pandas Web Site] (https://pandas.pydata.org/), Accessed 2/5/2022.
+* [Python Documentation] (https://docs.python.org/), Accessed 2/5/2022.
+* [Stack Overflow entry], (https://stackoverflow.com/questions/9847213/how-do-i-get-the-day-of-week-given-a-date)
