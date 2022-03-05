@@ -234,16 +234,19 @@ def display_raw_data(df):
 def main():
     print(pd.__version__)
     while True:
+        # get data filter selection and load data into data frame
         city, month, day = get_filters()
         df = load_data(city, month, day)
         print("Displaying Data for: {}, Month: {}, Day: {}".format(city.title(),month.title(),day.title()))
 
+        # run individual functions to get statistics
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
         display_raw_data(df)
 
+        # check to see if user wants to run program again
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
